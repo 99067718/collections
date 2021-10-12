@@ -4,6 +4,15 @@ Zak_V2 = {}
 
 colors = ["oranje", "blauw", "groen", "bruin"]
 
+
+def sorteren(soortCheck):
+    soort = soortCheck(type)
+    if soort == "list":
+        return Zak.sort()
+
+    elif soort == "dict":
+        return sorted(soortCheck)
+
 def amount():
     return int(input("Hoeveel M&M's wil je in je zakje?: "))
 
@@ -27,8 +36,12 @@ def diction(aantal: int):
         
 
 toevoegen(amount())
+Alphabetic = sorted(Zak)
+print((listToStringWithoutBrackets(Alphabetic)))
 
-print(listToStringWithoutBrackets(Zak))
+dictionlisted = diction(amount())
 
-print(diction(amount()))
+print(dictionlisted)
+Sorted_Items = sorted(dictionlisted, key=lambda x: dictionlisted[x], reverse=True)
+print(Sorted_Items)
 
